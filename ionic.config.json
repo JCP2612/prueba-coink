@@ -1,0 +1,7 @@
+{
+  "name": "prueba-coink",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular-standalone"
+}
