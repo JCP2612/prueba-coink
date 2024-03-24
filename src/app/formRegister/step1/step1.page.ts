@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { IonicModule } from '@ionic/angular';
+import {  IonicModule } from '@ionic/angular';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-step1',
@@ -10,11 +11,16 @@ import { IonicModule } from '@ionic/angular';
   standalone: true,
   imports: [IonicModule, CommonModule, FormsModule]
 })
-export class Step1Page implements OnInit {
+export class Step1Page {
 
-  constructor() { }
+  constructor(private  router: Router) { }
 
-  ngOnInit() {
+  formulariodos(){
+    this.router.navigate(['/step2']);
+  }
+
+  retroceder(){
+    this.router.navigate(['/login'])
   }
 
 }
